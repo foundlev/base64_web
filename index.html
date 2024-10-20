@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 конвертер</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Base64 конвертер</h1>
+        <div class="theme-switcher">
+            <!-- Кастомный переключатель темы -->
+            <div class="dropdown">
+                <button class="dropbtn"><span id="selected-theme">Тема</span> <i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#" data-theme="auto"><i class="fas fa-adjust"></i> Авто</a>
+                    <a href="#" data-theme="light"><i class="fas fa-sun"></i> Светлая тема</a>
+                    <a href="#" data-theme="dark"><i class="fas fa-moon"></i> Тёмная тема</a>
+                </div>
+            </div>
+        </div>
+        <div class="converter">
+            <div class="field">
+                <label for="base64-input">Base64</label>
+                <textarea id="base64-input" placeholder="Введите Base64..."></textarea>
+                <div class="buttons">
+                    <button id="paste-base64" title="Вставить"><i class="fas fa-paste"></i><span> Вставить</span></button>
+                    <button id="copy-base64" title="Копировать"><i class="fas fa-copy"></i><span> Копировать</span></button>
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrows-alt-h"></i>
+            </div>
+            <div class="field">
+                <label for="text-input">Текст</label>
+                <textarea id="text-input" placeholder="Введите текст..."></textarea>
+                <div class="buttons">
+                    <button id="paste-text" title="Вставить"><i class="fas fa-paste"></i><span> Вставить</span></button>
+                    <button id="copy-text" title="Копировать"><i class="fas fa-copy"></i><span> Копировать</span></button>
+                    <!-- Новая кнопка для форматирования JSON -->
+                    <button id="format-json" title="JSON" style="display: none;"><i class="fas fa-code"></i><span> JSON</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
